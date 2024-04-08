@@ -1,0 +1,22 @@
+#include <math.h>
+#include<stdio.h>
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	int x =0 ;
+	printf("please, enter the number\n");
+	scanf("%d",&x);
+	for(int i =2;i<x;i++){
+		if (x % i ==0){
+			printf("this number is not prime\n");
+			break;
+
+		}
+		else
+			printf("this number is prime\n");
+		break;
+	}
+	return 0 ;
+}
+
+

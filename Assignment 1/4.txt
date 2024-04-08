@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+float r ;
+float area ;
+float cir ;
+	printf("please enter radius\n");
+	scanf("%f",&r);
+	area=r*r*(22/7);
+	cir =2*r*(22/7) ;
+	printf("the area is =%f,\n ",area);
+	printf("the circumference is =%f,\n ",cir);
+
+	return 0 ;
+}

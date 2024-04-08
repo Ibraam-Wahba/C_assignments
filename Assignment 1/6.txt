@@ -1,0 +1,17 @@
+#include<stdio>
+int main (){
+int a = 5;
+int b = 7 ; 
+if(a>b){
+printf("a is bigger than b \n");
+printf("a is = %d",a);
+}
+else if (a==b){
+printf("a and b are equal \n");
+}
+else{
+printf("b is bigger than a \n");
+printf("b is = %d",b); 
+}
+return 0 ;
+} 

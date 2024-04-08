@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	int num = 0 ;
+	int power = 0 ;
+	int result = 1;
+	printf("please, enter the number\n");
+	scanf("%d",&num);
+	printf("please, enter the power\n");
+	scanf("%d",&power);
+	if(power==0){
+		printf("Result is = 1\n");
+	}
+	else {
+		while(power!=0)
+		{
+			result*= num;
+			--power ;
+		}
+		printf("Result is = %d \n",result);
+	}
+	return 0 ;
+}

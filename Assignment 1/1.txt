@@ -1,0 +1,9 @@
+int num1 = 0 ;
+    int num2 = 0 ;
+	float result=0;
+	printf("please enter num1");
+	scanf("%d",&num1);
+	printf("please enter num2");
+	scanf("%d",&num2);
+	result=((num1+num2)*3)-10 ;
+	printf("the Result is=%f",result);

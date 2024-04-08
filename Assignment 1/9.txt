@@ -1,0 +1,25 @@
+#include <math.h>
+#include<stdio.h>
+int main (){
+float x = 0 ;
+printf("please,enter your grade percentage \n");
+scanf("%f",&x);
+if(x>=85){
+	printf("your grade is Excellent");
+}
+else if (x>=75){
+	printf("your grade is Very Good");
+
+}
+else if (x>=65){
+	printf("your grade is Good");
+
+}
+else if (x>=50){
+	printf("your grade is Pass");
+}
+else if (x<50){
+	printf("your grade is Fail");
+}
+return 0 ;
+}

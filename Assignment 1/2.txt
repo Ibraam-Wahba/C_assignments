@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main(){
+
+	printf("My name is:Ibraam Wahba\n");
+	printf("Grade: Pass");
+	return 0 ;
+}

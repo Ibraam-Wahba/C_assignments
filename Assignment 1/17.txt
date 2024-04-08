@@ -1,0 +1,16 @@
+#include <math.h>
+#include<stdio.h>
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	int x= 503033 ;
+	int counter = 0;
+	while(x!=0){
+		x = x / 10 ;
+		counter ++ ;
+	}
+	printf("the number is %d\n",counter);
+	return 0 ;
+}
+
+

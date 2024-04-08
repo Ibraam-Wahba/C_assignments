@@ -1,0 +1,19 @@
+#include <math.h>
+#include<stdio.h>
+int main (){
+float h = 0.0 ;
+int n = 0 ;
+int x =0 ;
+printf("please,enter the number\n");
+scanf("%d",&x);
+h= sqrt(x);
+n=h ;
+if(n<h || n>h ){
+	printf("it's not perfect square\n");}
+else{
+	printf("it's perfect square\n");
+}
+
+
+return 0 ;
+}
