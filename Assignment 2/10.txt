@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+void no_of_holes(int s );
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	int num1 = 89502 ;
+	no_of_holes(num1);
+
+	return 0 ;
+}
+void no_of_holes(int s )
+{
+	int rem = 1 ;
+	int counter = 0 ;
+	while(s>0){
+		rem = s%10 ;
+		if(rem==0||rem==4||rem==6||rem==9){
+			counter ++ ;
+		}
+		else if (rem == 8){
+			counter+=2 ;
+		}
+		s = s/10 ;
+		rem = 1 ;
+	}
+	printf(" the number of holes = %d \n",counter);
+
+}
+
+

@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<math.h>
+void temperature(int num1);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
+	int c = 80 ;
+
+	temperature(c);
+	return 0 ;
+}
+void temperature(int num1)
+{
+	if(num1<30){
+		printf("the required heating time = 7 mins.");
+	}
+	else if(num1>30&&num1<60){
+			printf("the required heating time = 5 mins.");
+		}
+	else if(num1>60&&num1<90){
+			printf("the required heating time = 3 mins.");
+		}
+	else if(num1<90){
+			printf("the required heating time = 1 mins.");
+		}
+}

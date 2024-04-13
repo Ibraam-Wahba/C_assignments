@@ -1,0 +1,30 @@
+#include<stdio.h>
+float calc(float a,float b,int x);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	float h = 2 ;
+	float g = 5 ;
+	int c = 3 ;
+	calc(h,g,c);
+	printf("%f",calc(h,g,c));
+	return 0 ;
+}
+float calc(float a,float b,int x){
+switch(x){
+case 1:
+return a + b ;
+break;
+case 2:
+		return a - b ;
+break;
+case 3:
+		return a * b ;
+break;
+case 4:
+		return a / b ;
+break;
+default:
+	    return -1 ;
+}
+}

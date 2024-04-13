@@ -1,0 +1,14 @@
+#include<stdio.h>
+int alpha(char x);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
+	int c = 'z' ;
+	alpha(c);
+	printf("%c",alpha(c));
+	return 0 ;
+}
+int alpha(char x){
+return x-32 ;
+}

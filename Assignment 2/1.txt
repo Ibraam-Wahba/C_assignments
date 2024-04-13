@@ -1,0 +1,15 @@
+#include<stdio.h>
+int cube(int x);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	int f = 3 ;
+	cube(f);
+	printf("%d",cube(f));
+
+	return 0 ;
+}
+int cube(int x)
+{
+	return (x*x*x);
+}

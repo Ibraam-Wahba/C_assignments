@@ -1,0 +1,20 @@
+#include<stdio.h>
+int p_or_n(int x);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	int f = - 65 ;
+	p_or_n(f);
+	printf("%d", p_or_n(f));
+	return 0 ;
+}
+int p_or_n(int x)
+{
+	if (x>=0){
+		return 1 ;
+	}
+
+	else {
+		return 0 ;
+	}
+}

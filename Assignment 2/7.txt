@@ -1,0 +1,20 @@
+#include<stdio.h>
+void multply(int y,int x);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
+	int c = 14 ;
+	int d = 3 ;
+	multply(d,c);
+
+	return 0 ;
+}
+void multply(int y,int x){
+	if(x % y == 0){
+		printf("the first is multiple of the second");
+	}
+	else {
+		printf("the first is not multiple of the second");
+	}
+}

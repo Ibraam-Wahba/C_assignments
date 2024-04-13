@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+void count_ones(unsigned int num1);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
+	unsigned int f =1246262 ;
+	count_ones(f);
+	return 0 ;
+}
+void count_ones(unsigned int num1){
+	unsigned int mask = 0x80000000;
+	int counter = 0 ;
+	for(int i=0;i<32;i++){
+		if((num1<<i)&mask){
+			counter++ ;
+		}
+	}
+	printf("%d",counter);
+}

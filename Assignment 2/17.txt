@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<math.h>
+void XOR(int s,int r );
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+	int num1 = 10 ;
+	int num2 = 15 ;
+	XOR(num1,num2);
+
+	return 0 ;
+}
+void XOR(int s,int r)
+{
+	int max = 0 ;
+	int result = 0 ;
+	for(int i=s;i<=r;i++){
+
+		for(int j=i;j<=r;j++){
+			result =i ^ j ;
+			if(result>max){
+				max = result ;
+			}
+			printf("%d ^ %d = %d \n",i,j,result);
+		}
+
+
+	}
+
+	printf("the max result is = %d",max);
+
+}
+
+
