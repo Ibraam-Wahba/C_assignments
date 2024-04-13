@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<math.h>
+#define arr_SIZE 6
+void bubble_sorting(int arr[],int SIZE);
+int main (){
+	
+	int arr [arr_SIZE]={5,2,4,6,8,3};
+	
+	bubble_sorting(arr,arr_SIZE );
+
+	return 0 ;
+}
+void bubble_sorting(int arr[],int SIZE)
+{
+	for(int i =0;i<arr_SIZE-1;i++)
+	{
+		for(int j=0;j<arr_SIZE-1-i;j++){
+			if(arr[j+1]<arr[j])
+{
+				int temp = 0;
+				temp = arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+
+			}
+
+
+		}
+	}
+	for(int e = 0;e<arr_SIZE;e++){
+		printf("%d \t",arr[e]);
+	}
+
+}
+

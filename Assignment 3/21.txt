@@ -1,0 +1,33 @@
+#include <stdio.h>
+int arr[256];
+int false[2]={0xFF,0xFF};
+int *nums_in_between (unsigned int LowerValue ,int unsigned  UpperValue);
+int main()
+{
+	int t;
+	unsigned int num1 =5 ;
+	unsigned int num2 =2 ;
+	nums_in_between(num2,num1);
+	for(t=0;t<(1+(num1-num2));t++){
+		printf("%d\t",arr[t]);
+	}
+	return 0;
+}
+
+int *nums_in_between (unsigned int LowerValue ,int unsigned  UpperValue){
+	int i ;
+
+	int j = 2+(UpperValue-LowerValue);
+	if(UpperValue>LowerValue && (UpperValue-LowerValue)>1){
+		for(i=0;i<(UpperValue-LowerValue)+1;i++){
+			if(j>=LowerValue){
+				arr[i]=j;
+				--j;
+			}
+		}
+		return arr;
+	}
+
+	return false ;
+}
+

@@ -1,0 +1,64 @@
+#include <stdio.h>
+int arr[256];
+int false[2]={0xFF,0xFF};
+int *nums_in_between (unsigned int LowerValue ,int unsigned  UpperValue);
+int main()
+{
+	int t;
+	unsigned int num1 =10 ;
+	unsigned int num2 =2 ;
+	nums_in_between(num2,num1);
+	for(t=0;t<(num1-num2-1);t++){
+		printf("%d\t",arr[t]);
+	}
+	return 0;
+}
+
+int *nums_in_between (unsigned int LowerValue ,int unsigned  UpperValue){
+	int i ;
+
+	int j = 1+(UpperValue-LowerValue);
+	if(UpperValue>LowerValue){
+		for(i=0;i<(UpperValue-LowerValue-1);i++){
+			if(j>LowerValue){
+				arr[i]=j;
+				--j;
+			}
+		}
+		return arr;
+	}
+
+	return false ;
+}
+/*******************************************************************************************/
+#include <stdio.h>
+unsigned int a[2]={0xFF,0xFF};
+unsigned int arr[256]={0};
+unsigned int *values_between(unsigned int x, unsigned int y);
+int main() {
+    // Write C code here
+values_between(2,10);
+    return 0;
+}
+
+unsigned int *values_between(unsigned int x, unsigned int y)
+{
+    if(x>=y)
+    {
+        return a;
+    }
+    char size = y-x-1;
+    
+    
+    for(char i=0;i<size;i++)
+    {
+        y--;
+        arr[i]=y;
+    }
+    for(char e=0;e<size;e++)
+    {
+        printf("%d \t",arr[e]);
+    }
+    
+    return arr;
+}

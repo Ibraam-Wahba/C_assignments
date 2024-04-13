@@ -1,0 +1,22 @@
+#include <stdio.h>
+#define arr1 5
+int compare (int size,int *a,int *b);
+int main()
+{
+	int a[arr1]={1,2,3,4,5};
+	int b[arr1]={1,2,3,4,5};
+	printf("%d",compare(arr1,a,b));
+	return 0;
+}
+
+int compare (int size,int *a,int *b){
+	int i ;
+	for(i=0;i<arr1;i++){
+		if(a[i]!=b[i]){
+			return 1;
+		}
+
+	}
+	return 0 ;
+}
+

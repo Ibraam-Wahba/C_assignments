@@ -1,0 +1,67 @@
+#include <stdio.h>
+#define arr1 10
+#define error 0
+int removeDuplicates(int arr_old[], int n_old, int arr_new[], int *n_new);
+int main()
+{
+	int arrA[arr1]={1,2,3,3,3,4,4,5,5,5};
+	int arrB[5]={0};
+	int m,x=5;
+	int *ptr = &x;
+	removeDuplicates(arrA,arr1,arrB,ptr);
+	for(m=0;m<*ptr;m++){
+		printf("%d\t",arrB[m]);
+	}
+	return 0;
+}
+
+int removeDuplicates(int arr_old[], int n_old, int arr_new[], int *n_new){
+	int j=0,i;
+	if(n_old==0){
+		return error ;
+	}
+
+	for(i=0;i<10;i++){
+		if(arr_old[i]!=arr_old[i+1]){
+			arr_new[j]=arr_old[i];
+			++j;
+		}
+	}
+	return *n_new;
+}
+/***************************************************************************************************/
+#include <stdio.h>
+#define n1 10
+int removeD(int arr_old[], int n_old, int arr_new[], int *n_new);
+
+int main() {
+int n2 = 5;
+int *ptr = &n2;
+int arr1[] = {1,2,3,3,3,4,4,5,5,5} ;
+int arr2[] = {0};
+removeD(arr1,n1,arr2,ptr);
+    return 0;
+}
+
+int removeD(int arr_old[], int n_old, int arr_new[], int *n_new)
+{
+    if(n_old==0 || *n_new==0)
+    {
+        return 0;
+    }
+    int j=0;
+    for(int i=0;i<n_old-1;i++)
+    {
+        if(!(arr_old[i]==arr_old[i+1]))
+        {
+            arr_new[j]=arr_old[i];
+            j++;
+        }
+        else {}
+    }
+    arr_new[*n_new -1]= arr_old[n_old-1];
+    for(char w =0;w<*n_new;w++)
+    {
+        printf("%d \t",arr_new[w]);
+    }
+}

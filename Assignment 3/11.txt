@@ -1,0 +1,43 @@
+#include <stdio.h>
+#define arrSize 13
+void frequency_of_char(char arr[],char x);
+int main()
+{
+
+	char string[arrSize]={"Ibraam Wahba"};
+	char r ='a';
+	frequency_of_char(string,r);
+	return 0;
+}
+void frequency_of_char(char arr[],char x){
+	int counter = 0;
+	for(int i=0;i<arrSize;i++)
+	{
+		if(arr[i]==x)
+			counter++;
+	}
+	printf("%d",counter);
+}
+/*************************************************************************************/
+#include <stdio.h>
+void frequencyOfCharacter (char a[],char s);
+int main() {
+    
+   char str[]="ibraam wahba";
+   frequencyOfCharacter(str,'a');
+
+    return 0;
+}
+void frequencyOfCharacter (char a[],char s)
+{
+    int i=0 , count=0 ;
+    while(a[i]!=NULL)
+    {
+        if(a[i]==s)
+        {
+            count++;
+        }
+        i++;
+    }
+    printf("%d",count);
+}

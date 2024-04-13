@@ -1,0 +1,41 @@
+#include <stdio.h>
+#define arrSize 10
+void upperToLower(char arr[]);
+int main()
+{
+
+	char string[arrSize]={"HELloKIDs"};
+	upperToLower(string);
+	return 0;
+}
+void upperToLower(char arr[]){
+	for(int i=0;i<arrSize;i++)
+	{
+		if(arr[i]>=65&&arr[i]<=90){
+			arr[i]+=32;
+		}
+		printf("%c",arr[i]);
+	}
+}
+/***************************************************************************************************/
+#include <stdio.h>
+void convert (char a[]);
+int main() {
+   char str[]="IBraAm";
+   convert(str);
+   printf("%s",str);
+
+    return 0;
+}
+void convert (char a[])
+{
+    int i = 0;
+    while(a[i] !=NULL)
+    {
+        if((a[i]>='A') & (a[i]<='Z'))
+        {
+            a[i]+=32;
+        }
+        i++;
+    }
+}

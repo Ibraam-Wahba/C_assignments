@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include "string.h"
+void reverse_string(char arr[]);
+int main()
+{
+
+	char string[]={"ibraam"};
+	reverse_string(string);
+	puts(string);
+	return 0;
+}
+void  reverse_string(char arr[]){
+	char temp ;
+	int i;
+	int j=strlen(arr)-1;
+	for(i=0 ; i <(strlen(arr)/2);i++){
+
+
+		temp=arr[i];
+		arr[i]=arr[j];
+		arr[j]=temp;
+		j--;
+	}
+}
+/********************************************************************************************/
+// Online C compiler to run C program online
+#include <stdio.h>
+void reverse(char arr[]);
+int main() {
+   
+   char string[] ="ibraam wahba" ;
+   reverse(string);
+
+    return 0;
+}
+
+void reverse(char arr[])
+{
+    
+    for(int i =0;(i<strlen(arr)/2);i++)
+    {
+        char temp=0;
+        temp = arr[i];
+        arr[i]=arr[strlen(arr)-i-1];
+        arr[strlen(arr)-i-1] = temp;
+    }
+    puts(arr);
+}
+/*********************************************************************************************/
+#include <stdio.h>
+#include <string.h>
+void reverse(char a[]);
+int main() {
+    char str[]="ibraam";
+   reverse(str);
+   puts(str);
+    return 0;
+}
+void reverse(char a[])
+{
+    int i = strlen(a)-1,j;
+    char temp;
+    for(j=0;j<(strlen(a)/2);++j)
+    {
+        temp=a[j];
+        a[j]=a[i-j];
+        a[i-j]=temp;
+    }
+}

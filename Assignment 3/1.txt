@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+#define SIZE 5
+int summation(int numbers_size, int* numbers);
+int main (){
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
+	int numbers[SIZE]={1,2,3,4,5};
+
+	summation(SIZE,numbers);
+	printf("%d",summation(SIZE,numbers));
+	return 0 ;
+}
+int summation(int numbers_size, int* numbers){
+	int i ;
+	int sum = 0 ;
+	for(i=0;i<SIZE;i++){
+		sum+=numbers[i];
+	}
+	return sum ;
+}
