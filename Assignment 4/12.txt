@@ -1,0 +1,26 @@
+#include<stdio.h>
+#define size 14
+int odd_repetitions(int a[],int s);
+int main(){
+	int arr[]={1,2,3,3,2,1,4,4,5,5,6,6,6,8};
+	printf("%d",odd_repetitions(arr,size));
+
+	return 0;
+}
+int odd_repetitions(int a[],int s){
+	int j,counter=0,i;
+	for(i=0;i<size;i++){
+		for(j=0;j<size;j++){
+			if(a[i]==a[j]){
+				counter++;
+			}
+		}
+		if(counter%2==0){
+			counter=0;
+		}
+		else
+			break;
+	}
+
+	return a[i];
+}

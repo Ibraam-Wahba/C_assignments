@@ -1,0 +1,48 @@
+#include <stdio.h>
+int smallest(int *ptr);
+int main() {
+    int t;
+	int arr[10]={1,2,3,4,5,6,7,8,9,10};
+	int *ptr = arr ;
+    t=smallest(ptr);
+   printf("%d",t);
+	return 0;
+}
+int smallest(int *ptr){
+    int i,small=*ptr ;
+    for(i=0;i<10;i++){
+        if(small>*(ptr+i)){
+            small=*(ptr+i);
+        }
+        
+    }
+    return small;
+}
+/**************************************************************************************************/
+#include <stdio.h>
+#define siZe 7
+int min(int *ptr ,int size) ;
+int main() {
+
+int i, arr[7]={3,2,3,4,5,6,1};
+int *ptr=arr;
+printf("%d",min(ptr,siZe));
+
+
+
+    return 0;
+}
+int min(int *ptr ,int size) 
+{
+    int i, mini = 0;
+    mini = *ptr;
+    for(i=0;i<size;i++)
+    {
+        if(mini>*ptr)
+        {
+            mini=*ptr;
+        }
+        ptr++;
+    }
+    return mini;
+}

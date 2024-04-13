@@ -1,0 +1,32 @@
+#include<stdio.h>
+char swap_reverce(char a[],char b[]);
+int main(){
+	int r ;
+	char arr[]={"bat"};
+	char x[3];
+	swap_reverce(arr,x);
+	for(r=0;r<3;r++){
+		printf("%c",x[r]);
+	}
+	return 0;
+}
+char swap_reverce(char a[],char b[]){
+	int i;
+	char *ptr=a;
+	while(*ptr !='\0'){
+		ptr++;
+	}
+	ptr--;
+	for(i=0;i<3;i++){
+		if('a'==*ptr){
+			b[i]=' ';
+			ptr--;
+		}
+		else{
+			b[i]=*ptr;
+			ptr--;
+		}
+
+	}
+	return b ;
+}

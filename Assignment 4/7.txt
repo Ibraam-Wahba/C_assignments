@@ -1,0 +1,17 @@
+#include<stdio.h>
+void swap(int x,int y);
+int main(){
+	int a=15,b=10;
+	void (*ptr)(int,int)=swap;
+	ptr(a,b);
+
+
+	return 0;
+}
+void swap(int x,int y){
+	x=x^y;
+	y=x^y;
+	x=x^y;
+	printf("%d \n",x);
+	printf("%d \n",y);
+}

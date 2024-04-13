@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(void) {
+	int i,j=0;
+	int arr[]={1,2,3,4,5};
+	int *ptr=arr;
+	for(i=0;i<5;i++){
+		j+=*ptr;
+		ptr++;
+	}
+	printf("%d",j);
+	return 0;
+}

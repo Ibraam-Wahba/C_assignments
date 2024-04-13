@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+
+	char string[]={"Jenny George"};
+	char *ptr = string;
+    char count=0 ;
+    while(*ptr != '\0'){
+    	count++;
+    	ptr++;
+    }
+    printf("string length is = %d",count);
+
+	return 0;
+}
