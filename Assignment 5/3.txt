@@ -1,0 +1,30 @@
+#include <stdio.h>
+ typedef struct complex 
+ {
+     float real ;
+     float ima ;
+ }complex;
+ 
+ complex add (complex n1,complex n2);
+ 
+ int main()
+ {
+     complex c1,c2,temo;
+     c1.real = 5;
+     c1.ima = 7;
+     
+     c2.real = 6;
+     c2.ima = 2;
+     temo = add(c1,c2);
+     printf("\nthe sum of the 2 complex nums is = %.1f + %.1fi ",temo.real,temo.ima);
+     
+     return 0 ;
+ }
+ 
+  complex add (complex n1,complex n2)
+  {
+      complex temp;
+      temp.real = n1.real + n2.real ;
+      temp.ima  = n1.ima  + n2.ima  ;
+      return temp;
+  }

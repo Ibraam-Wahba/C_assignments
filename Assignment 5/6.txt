@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h> 
+union family_name 
+{
+    char first_name[30];
+    char last_name[30];
+}family;
+int main() {
+
+//family.first_name={ibraam};
+strcpy(family.first_name,"ibraam");
+printf("%s\n",family.last_name);
+printf("%d",sizeof(family));
+    return 0;
+}
